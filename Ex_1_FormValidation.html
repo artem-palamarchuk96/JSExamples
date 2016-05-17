@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<input id="input" type="text">
+<input id="btn" type="button" value="btn">
+
+<script type="text/javascript">
+	
+	d = document;
+	var btn = d.getElementById('btn');
+	btn.onclick = function buttonClick() {
+		var data = d.getElementById('input').value;
+		var reg = /\d{1,2}-\d{1,2}-\d{4}/;
+		if  (reg.test(data)) {
+			alert('lolec');
+		}
+	}
+
+
+
+</script>
+
+
+</body>
+</html>
