@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random 100 number / sorted array</title>
+</head>
+<body>
+<input id="btn" type="button" value="push">
+<textarea id="result-unsort" style="display: block;" cols="50" rows="8"></textarea>
+
+<textarea id="result-sort" style="display: block;" cols="50" rows="8"></textarea>
+<script type="text/javascript">
+	d = document;
+	var mas = [];
+	max = 120;
+	min = 53;
+	var btn = d.getElementById('btn');
+	btn.addEventListener('click', getRandomInt);
+
+	function getRandomInt() {
+		d.getElementById('result-unsort').innerHTML = '';
+		d.getElementById('result-sort').innerHTML = '';
+		for (var i = 0; i < 100; i++) {
+			mas[i] = Math.floor(Math.random() * (max - min + 1)) + min;
+			d.getElementById('result-unsort').innerHTML += mas[i] + ' ';
+		}
+
+		mas.sort(function(a,b){return a-b;});
+		
+
+		for (var i = 0; i < 100; i++) {
+			d.getElementById('result-sort').innerHTML += mas[i] + ' ';
+		}
+
+
+	}
+
+
+</script>
+
+</body>
+</html>
