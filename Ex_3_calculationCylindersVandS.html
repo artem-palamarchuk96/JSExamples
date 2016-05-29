@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>calculation cylinder's V and S</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function(event) { 
+ 		var r = +prompt('Введите радиус'), h = +prompt('Введите высоту');
+		function calcV(a,b) {
+			var V = Math.PI * Math.pow(a,2) * b;
+			V = parseFloat(V.toFixed(2));
+			return V;
+		}
+
+		function calcS(a,b) {
+			var S = 2*Math.PI*a*(a+b);
+			S = parseFloat(S.toFixed(2));
+			return S;
+		}
+		alert('V = '+calcV(r,h)+'\n'+'S = '+calcS(r,h));
+	});
+</script>
+
+</body>
+</html>
